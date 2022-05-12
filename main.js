@@ -11,9 +11,7 @@ const numToGuess = document.getElementById("randomNumbers");
 const description = document.getElementById("description");
 const userGuess = [];
 let arrayNumbers = [];
-let greenNum = [];
-let redNum = [];
-let solution = [];
+
 
 for (let i = 0; i < 5; i++) {
     Numb = randomNum(1, 100);
@@ -26,25 +24,20 @@ numToGuess.innerHTML = (arrayNumbers.join(" "));
 setTimeout(() => {
     numToGuess.style.display = "none";
     description.innerHTML = "Ora prova ad inserire gli stessi numeri!";
-}, 3000);
+}, 30000);
 
 
 setTimeout(() => {
     for (let i = 0; i < 5; i++) {
         guess = Number(prompt("Inserisci un numero"));
-        userGuess.push(guess);
-    }
-}, 3100);
+        if (guess === arrayNumbers[i]) {
+            userGuess.push(guess);
+        }
+    } description.innerHTML = `Hai indovinato ${userGuess.length} numeri!`
+}, 30100);
 
 
 
-for (let i = 0; i < 5; i++) {
-    if (userGuess[i] === arrayNumbers[i]) {
-        greenNum.push(userGuess[i]);
-    } else {
-        redNum.push(userGuess[i]);
-    }
-}
 
 
 
