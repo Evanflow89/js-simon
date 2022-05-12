@@ -19,7 +19,6 @@ for (let i = 0; i < 5; i++) {
 numToGuess.innerHTML = (arrayNumbers.join(" "));
 
 
-// setTimeout(function () {
-
-
-// }30000;)
+setTimeout(() => {
+    numToGuess.style.display = "none";
+}, 3000);
