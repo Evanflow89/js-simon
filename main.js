@@ -34,11 +34,11 @@ setTimeout(() => {
         guess = Number(prompt("Inserisci un numero"));
         userGuess.push(guess);
     }
-}, 3000);
+}, 3100);
 
 
 
-for (let i = 0; i < arrayNumbers; i++) {
+for (let i = 0; i < 5; i++) {
     if (userGuess[i] === arrayNumbers[i]) {
         greenNum.push(userGuess[i]);
     } else {
