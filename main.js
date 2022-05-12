@@ -9,8 +9,13 @@ function randomNum(min, max) {
 
 const numToGuess = document.getElementById("randomNumbers");
 const description = document.getElementById("description");
+const refresh = document.getElementById("refresh");
 const userGuess = [];
 let arrayNumbers = [];
+
+refresh.addEventListener("click", function () {
+    window.location.reload();
+});
 
 
 for (let i = 0; i < 5; i++) {
@@ -34,6 +39,7 @@ setTimeout(() => {
             userGuess.push(guess);
         }
     } description.innerHTML = `Hai indovinato ${userGuess.length} numeri!`
+    refresh.style.display = "block";
 }, 30100);
 
 
