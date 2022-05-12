@@ -7,7 +7,10 @@ function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const numToGuess = document.getElementById("randomNumbers")
+const numToGuess = document.getElementById("randomNumbers");
+const description = document.getElementById("description");
+const userGuess = [];
+
 
 let arrayNumbers = [];
 
@@ -21,4 +24,14 @@ numToGuess.innerHTML = (arrayNumbers.join(" "));
 
 setTimeout(() => {
     numToGuess.style.display = "none";
+    description.innerHTML = "Ora prova ad inserire gli stessi numeri!";
 }, 3000);
+
+
+setTimeout(() => {
+    for (let i = 0; i < 5; i++) {
+        guess = Number(prompt("Inserisci un numero"));
+        userGuess.push(guess);
+    }
+}, 3000);
+
