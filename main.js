@@ -16,8 +16,8 @@ for (let i = 0; i < 5; i++) {
     arrayNumbers.push(Numb);
 }
 
+numToGuess.innerHTML = (arrayNumbers.join(" "));
 
-console.log(arrayNumbers);
 
 // setTimeout(function () {
 
