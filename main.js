@@ -10,9 +10,10 @@ function randomNum(min, max) {
 const numToGuess = document.getElementById("randomNumbers");
 const description = document.getElementById("description");
 const userGuess = [];
-
-
 let arrayNumbers = [];
+let greenNum = [];
+let redNum = [];
+let solution = [];
 
 for (let i = 0; i < 5; i++) {
     Numb = randomNum(1, 100);
@@ -34,4 +35,16 @@ setTimeout(() => {
         userGuess.push(guess);
     }
 }, 3000);
+
+
+
+for (let i = 0; i < arrayNumbers; i++) {
+    if (userGuess[i] === arrayNumbers[i]) {
+        greenNum.push(userGuess[i]);
+    } else {
+        redNum.push(userGuess[i]);
+    }
+}
+
+
 
